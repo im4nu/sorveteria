@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #E7E7E4;
+    color: black;
+
+    font-family: "Julius Sans One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  li{
+    list-style-type: none;
+  }
+
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+  }
+
+  .nav_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+
+    padding: 25px 0;
+  }
+
+  .nav_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 40%;
+  }
+
+  .buttom{
+    border: solid 1px black;
+    border-radius: 6px;
+    padding: 6px 24px;
+    background-color: #F4F9F1;
+  }
+
+  #Hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 7%;
+
+    background-image: url(/assets/Imagem_hero.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  #Hero h1{
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  #Hero p{
+    font-size: 18px;
+  }
