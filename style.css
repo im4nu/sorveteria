@@ -259,16 +259,23 @@ nav {
 /*--------------*/
 #Nossa_historia {
   display: flex;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
+  flex-direction: column;
   justify-content: center;
   gap: 8%;
   padding: 5% 10%;
 
   width: 100%;
   height: 90vh;
+}
 
-  background-color: grey;
+.header_nossa_historia {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+
+  justify-content: space-between;
+  width: 100%;
 }
 
 .Texto_nossa_historia {
@@ -290,7 +297,7 @@ nav {
   border-radius: 20px;
 }
 
-.sorvetes_coloridos {
+.footer_nossa_historia {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,6 +305,7 @@ nav {
 
   padding-top: 50px;
 }
+
 /*--------------*/
 #Trabalhe_conosco {
   display: flex;
@@ -390,7 +398,7 @@ nav {
 .header_card p {
   flex-wrap: wrap;
   width: calc(100% - 100px);
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 .header_card img {
@@ -407,7 +415,7 @@ nav {
 }
 
 .footer_card h4 {
-  font-size: 1.2rem;
+  font-size: 12px;
   font-family: "Julius Sans One", serif;
 }
 
@@ -425,8 +433,8 @@ footer {
   width: 100%;
   height: 25vh;
 }
-
-@media (min-width: 1px) and (max-width: 760px) {
+/*-------------------------Responsividade-------------------------*/
+@media (min-width: 1px) and (max-width: 768px) {
   html {
     font-size: 50%;
   }
@@ -452,12 +460,24 @@ footer {
 
     width: 100%;
     height: 100%;
+  }
 
-    background-color: aquamarine;
+  .header_nossa_historia {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    width: 100%;
   }
 
   .Texto_nossa_historia {
     width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .Texto_nossa_historia h3 {
+    padding: 25px;
   }
 
   .Video {
@@ -466,12 +486,108 @@ footer {
     height: 100%;
   }
 
-  .sorvetes_coloridos {
+  .footer_nossa_historia {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 
-    padding-top: 50px;
+    padding-top: 25px;
+  }
+
+  .footer_nossa_historia img {
+    width: 90%;
+  }
+
+  footer img {
+    width: 30%;
+    padding-bottom: 5px;
+  }
+
+  #Comentarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: fit-content;
+    width: 100%;
+
+    padding: 5% 0%;
+  }
+
+  #Trabalhe_conosco h2 {
+    padding: 0%;
+  }
+
+  .formulario {
+    width: 60%;
+    padding-top: 25px;
+  }
+
+  .formulario input {
+    width: 100%;
+  }
+
+  .formulario button {
+    width: 60%;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1226px) {
+  #Nossa_historia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5% 10%;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .header_nossa_historia {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .Texto_nossa_historia {
+    width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .Texto_nossa_historia h3 {
+    padding: 25px;
+  }
+
+  .Video {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #Trabalhe_conosco {
+    margin-bottom: 25px;
+  }
+
+  #Trabalhe_conosco h2 {
+    padding: 0%;
+  }
+
+  .formulario {
+    width: 60%;
+    padding-top: 15px;
+  }
+
+  .formulario input {
+    width: 50%;
+  }
+
+  .formulario button {
+    width: 40%;
+    justify-content: center;
   }
 }
