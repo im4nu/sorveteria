@@ -58,11 +58,7 @@ nav {
 
   background-color: #e7e7e444;
   backdrop-filter: blur(5.5px);
-  padding: 25px 0;
-}
-
-nav img{
-  margin-left: 100px;
+  padding: 25px 100px;
 }
 
 .nav_content {
@@ -72,7 +68,7 @@ nav img{
   justify-content: end;
   align-items: center;
 
-  width: 75%;
+  width: 100%;
 
 }
 
@@ -82,8 +78,8 @@ nav img{
   justify-content: space-between;
   font-size: 1.2rem;
   width: 40%;
+  margin: auto;
 }
-
 
 .buttom {
   border: solid 1px black;
@@ -92,7 +88,10 @@ nav img{
   background-color: #f4f9f1;
 
   font-size: 1.2rem;
-  margin-left: 100px;
+}
+
+.menu_icon{
+  display: none;
 }
 /*--------------*/
 #Hero {
@@ -451,21 +450,56 @@ footer {
   height: 25vh;
 }
 /*-------------------------Responsividade-------------------------*/
-@media (min-width: 1px) and (max-width: 768px) {
+@media (min-width: 1px) and (max-width: 769px) {
   html {
     font-size: 50%;
   }
 
+  nav {
+    padding: 25px 25px;
+  }
+  
   .nav_content{
     display: none;
   }
-  nav img{
-    margin-left: 25px;
+
+  .menu_icon{
+    width: 40px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  .um, 
+  .dois, 
+  .tres {
+    background-color: black;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+  }
+
+  /* .nav_content{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color:#e7e7e4;
+    z-index: 10;
+  }  */
+
+  #hero{
+    width: 100%;
+    height: 100%;
   }
 
   .texto_hero{
-    padding-bottom: 150px;
-  }
+    padding-bottom: 100px;
+  } 
+  
   .Apresentacao_container {
     display: flex;
     flex-direction: column;
@@ -480,14 +514,12 @@ footer {
   }
 
   #Produtos {
-  
     width: 100%;
     height: 100%;
     padding: 25px;
   }
 
   .itens_catalogo {
-
     padding-top: 5px;
   }
 
@@ -574,6 +606,11 @@ footer {
   }
 }
 @media (min-width: 769px) and (max-width: 1224px) {
+  
+  nav {
+    padding: 25px 50px;
+  }
+  
   #Produtos {
   
     width: 100%;
