@@ -49,39 +49,48 @@ li {
   list-style-type: none;
 }
 /*--------------*/
-nav {
+header {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  
   width: 100%;
   position: fixed;
+  
 
   background-color: #e7e7e444;
   backdrop-filter: blur(5.5px);
   padding: 25px 100px;
 }
 
-.nav_content {
-  justify-content: end;
+.menu_section{
   display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: center;
 
   width: 100%;
-
 }
 
-.nav_items {
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.2rem;
-  width: 40%;
+
+  font-size: 1.4rem;
+  width: 50%;
   margin: auto;
 }
 
 .buttom {
+  display: flex;
   border: solid 1px black;
   border-radius: 6px;
   padding: 6px 24px;
@@ -90,8 +99,8 @@ nav {
   font-size: 1.2rem;
 }
 
-.menu_icon{
-  display: none;
+.menu_section span{
+display: none;
 }
 /*--------------*/
 #Hero {
@@ -451,45 +460,13 @@ footer {
 }
 /*-------------------------Responsividade-------------------------*/
 @media (min-width: 1px) and (max-width: 769px) {
-  html {
+   html {
     font-size: 50%;
   }
 
-  nav {
+  header {
     padding: 25px 25px;
   }
-  
-  .nav_content{
-    display: none;
-  }
-
-  .menu_icon{
-    width: 40px;
-    height: 30px;
-    margin-right: 20px;
-  }
-
-  .um, 
-  .dois, 
-  .tres {
-    background-color: black;
-    height: 5px;
-    width: 100%;
-    margin: 6px auto;
-  }
-
-  /* .nav_content{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    background-color:#e7e7e4;
-    z-index: 10;
-  }  */
 
   #hero{
     width: 100%;
@@ -607,7 +584,7 @@ footer {
 }
 @media (min-width: 769px) and (max-width: 1224px) {
   
-  nav {
+  header {
     padding: 25px 50px;
   }
   
@@ -678,4 +655,69 @@ footer {
     width: 40%;
     justify-content: center;
   }
+}
+@media (max-width: 983px) {
+  html {
+    font-size: 50%;
+  }
+
+  /* header {
+    display: flex;
+    padding: 25px 25px;
+    justify-content: space-between;
+
+  }
+  
+  nav{
+    display: none;
+  }
+ /* -------------------- menu aberto ------------------  */
+  header  {
+    display: flex;
+    
+    height: 100%;
+    width: 100vw;
+
+    background-color: #e7e7e4;
+  } 
+
+  .menu_section { 
+    display: block;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: 100%;
+    width: 100vw;
+
+  }
+
+  .menu_section span {
+    display: flex;
+  }
+
+  .header_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+    
+  }
+
+  nav ul{
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 7rem;
+  }
+
+  nav .buttom{
+    font-size: 2rem;
+  }
+
+  
 }
