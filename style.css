@@ -102,6 +102,19 @@ nav ul{
 .menu_section span{
 display: none;
 }
+
+.menu_section nav ul :hover{
+  padding: 5px 30px;
+  border-radius: 25px;
+
+  background-color: rgba(192, 197, 205, 1);
+  color: #fff;
+}
+
+.menu_section nav .buttom:hover{
+  background-color: black;
+  color: #fff;
+}
 /*--------------*/
 #Hero {
   display: flex;
@@ -379,6 +392,14 @@ display: none;
 
   width: 30%;
 }
+
+.formulario button:hover{
+  background-color: black;
+  color: #fff;
+
+  cursor: pointer;
+}
+
 /*--------------*/
 #Comentarios {
   display: flex;
@@ -580,6 +601,7 @@ footer {
   .formulario button {
     width: 60%;
     font-size: 1.4rem;
+    justify-content: center;
   }
 }
 @media (min-width: 769px) and (max-width: 1224px) {
@@ -652,33 +674,26 @@ footer {
   }
 
   .formulario button {
-    width: 40%;
+    display: flex;
     justify-content: center;
+
+    width: 40%;
+    
   }
 }
 @media (max-width: 983px) {
   html {
     font-size: 50%;
   }
-
-  /* header {
-    display: flex;
-    padding: 25px 25px;
-    justify-content: space-between;
-
-  }
-  
   nav{
     display: none;
-  }
- /* -------------------- menu aberto ------------------  */
-  header  {
-    display: flex;
-    
-    height: 100%;
-    width: 100vw;
+  } 
 
-    background-color: #e7e7e4;
+  header {
+    display: flex;
+    padding: 25px 25px;
+  
+    width: 100vw;
   } 
 
   .menu_section { 
@@ -689,10 +704,12 @@ footer {
     height: 100%;
     width: 100vw;
 
-  }
 
-  .menu_section span {
+  }
+  
+  .header_menu span {
     display: flex;
+    cursor: pointer;
   }
 
   .header_menu{
@@ -700,24 +717,66 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
   }
+ /* -------------------- menu aberto ------------------  */
 
-  nav{
+ header {
+  display: flex;
+  padding: 25px 25px;
+
+  width: 100vw;
+  
+  } 
+  .menu_section.on { 
+    display: block;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: 100%;
+    width: 100vw;
+
+  }
+
+  .menu_section.on  span {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .menu_section.on  .header_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .menu_section.on nav{
     display: flex;
     flex-direction: column;
-    margin-top: 20%;
+    margin-top: 10%;
     
   }
 
-  nav ul{
+  .menu_section.on nav ul{
     flex-direction: column;
     align-items: center;
     font-size: 2rem;
     line-height: 7rem;
   }
 
-  nav .buttom{
+  .menu_section.on nav .buttom{
     font-size: 2rem;
+    margin-top: 25px;
   }
 
+  .menu_section.on nav ul :hover{
+    padding: 5px 30px;
+    border-radius: 25px;
+
+    background-color: rgba(192, 197, 205, 1);
+    color: #fff;
+  }
+
+  .menu_section.on nav .buttom:hover{
+    background-color: black;
+    color: #fff;
+  }
   
 }
